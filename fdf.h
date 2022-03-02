@@ -92,7 +92,6 @@ void		ft_drawimage(t_mapdata mapdata, void *mlx, void *win);
 int			ft_atoi_hexa(char *str);
 t_pointmeta	ft_getmeta(char *str);
 void		ft_plotpoints(int *x, int *y, t_mapdata *mapdata, char *str);
-void		ft_drawline(t_point point1, t_point point2, void *mlx, void *win);
 int			getzlength(char *str);
 int			ft_valid(int argc, char **argv);
 int			ft_content(char *file);

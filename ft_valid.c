@@ -70,8 +70,7 @@ int	ft_valid(int argc, char **argv)
 		if (ft_validext(argv[1]))
 		{
 			file = ft_getstring(argv[1]);
-			if (ft_content(file) && ft_value(file))
-				result = 1;
+			result = ft_value(file);
 		}
 	}
 	free(file);

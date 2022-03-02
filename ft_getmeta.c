@@ -54,17 +54,22 @@ int	getcolumns(char *str)
 //length: distance between points
 //try to fit in the largest diameter of map against horizontal
 //screen length.
-//hard mininum of 2 because 1 creates problems
 int	getlength(t_pointmeta meta, char *str)
 {
 	double	length;
-	double	zlength;
+	double	z;
+	double	r;
+	double	c;
+	int		sum;
 
-	zlength = getzlength(str);
-	if (meta.columns > meta.rows)
-		length = 800.0 / ((double)meta.columns + (zlength / 6)) * 0.8;
-	else
-		length = 800.0 / ((double)meta.rows + (zlength / 6) * 0.8);
+	z = getzlength(str);
+	r = (double)meta.rows;
+	c = (double)meta.columns;
+	r = r * cos(0.7854);
+	c = c * sin(0.7854);
+	z = z * 2 * sin(0.75);
+	sum = (int)(r + c + z);
+	length = 900.0 / sum;
 	if (length < 1.0)
 		length = 1.0;
 	return ((int)length);

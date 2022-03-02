@@ -31,6 +31,11 @@ void	ft_piximg(t_imgdata *id, int x, int y, int color)
 
 	pixelpos = (x * (id->bpp / 8)) + (y * id->len);
 	addr2 = id->addr + pixelpos;
+	if (pixelpos < 0)
+	{
+		ft_printf("Error: file is not a proper rectangular matrix\n");
+		exit (0);
+	}
 	*(unsigned int *)addr2 = color;
 }
 

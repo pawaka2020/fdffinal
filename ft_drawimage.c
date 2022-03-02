@@ -75,7 +75,7 @@ void	ft_drawimage(t_mapdata mp, void *mlx, void *win)
 {
 	t_imgdata	id;
 
-	id.img = mlx_new_image(mlx, 1440, 900);
+	id.img = mlx_new_image(mlx, 2560, 1600);
 	id.addr = mlx_get_data_addr(id.img, &id.bpp, &id.len, &id.endi);
 	printrows2(mp, id);
 	printcolumns2(mp, id);

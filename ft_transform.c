@@ -73,7 +73,7 @@ t_mapdata	ft_transform(t_mapdata mapdata, float rad1, float rad2)
 		tr.deltay = tr.tan * sin(tr.rad);
 		mp.points[i].x = tr.deltax + tr.centerx;
 		mp.points[i].y = tr.centery - (tr.deltay * cos(rad2));
-		mp.points[i].y -= (mp.points[i].z * sin(rad2) * mp.meta.length / 6);
+		mp.points[i].y -= (mp.points[i].z * sin(rad2) * mp.meta.length / 1);
 	}
 	return (mp);
 }

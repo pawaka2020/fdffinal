@@ -81,7 +81,6 @@ t_mapdata	ft_getpoints(char *map)
 	return (mapdata);
 }
 
-//map is argv[1]
 t_mapdata	ft_drawmap(char *map)
 {
 	t_mapdata	mapdata;
